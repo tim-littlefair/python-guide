@@ -1,37 +1,44 @@
 .. _install3-windows:
 
-Installing Python 3 on Windows
-==============================
 
-.. image:: https://farm5.staticflickr.com/4276/34435689480_2e6f358510_k_d.jpg
+##############################
+Installing Python 3 on Windows
+##############################
+
+.. image:: /_static/photos/34435689480_2e6f358510_k_d.jpg
 
 First, follow the installation instructions for `Chocolatey <https://chocolatey.org/install>`_.
-It's a community system packager manager for Windows 7+. (It's very much like Homebrew on OSX.)
+It's a community system packager manager for Windows 7+. (It's very much like Homebrew on OS X.)
 
 Once done, installing Python 3 is very simple, because Chocolatey pushes Python 3 as the default.
 
-.. code-block:: console
+.. code-block:: doscon
 
     choco install python
 
 Once you've run this command, you should be able to launch Python directly from to the console.
 (Chocolatey is fantastic and automatically adds Python to your path.)
 
-Setuptools + Pip
-----------------
 
-The two most crucial third-party Python packages are `setuptools <https://pypi.python.org/pypi/setuptools>`_ and `pip <https://pip.pypa.io/en/stable/>`_,
+****************
+Setuptools + Pip
+****************
+
+The two most crucial third-party Python packages are `setuptools <https://pypi.org/project/setuptools>`_ and `pip <https://pip.pypa.io/en/stable/>`_,
 which let you download, install and uninstall any compliant Python software
 product with a single command. It also enables you to add this network installation
 capability to your own Python software with very little work.
 
-All supported versions of Python 3 include pip, so just make sure it's up to date::
+All supported versions of Python 3 include pip, so just make sure it's up to date:
+
+.. code-block:: doscon
 
     python -m pip install -U pip
 
 
+*****************************
 Pipenv & Virtual Environments
------------------------------
+*****************************
 
 The next step is to install Pipenv, so you can install dependencies and manage virtual environments.
 
@@ -47,5 +54,5 @@ So, onward! To the :ref:`Pipenv & Virtual Environments <virtualenvironments-ref>
 
 --------------------------------
 
-This page is a remixed version of `another guide <http://www.stuartellis.eu/articles/python-development-windows/>`_,
+This page is a remixed version of `another guide <https://www.stuartellis.name/articles/python-development-windows/>`_,
 which is available under the same license.

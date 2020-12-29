@@ -1,23 +1,28 @@
-Common Gotchas
-==============
 
-.. image:: https://farm5.staticflickr.com/4163/34435688380_b5a740762b_k_d.jpg
+
+##############
+Common Gotchas
+##############
+
+.. image:: /_static/photos/34435688380_b5a740762b_k_d.jpg
 
 For the most part, Python aims to be a clean and consistent language that
-avoids surprises. However, there are a few cases that can be confusing to
+avoids surprises. However, there are a few cases that can be confusing for
 newcomers.
 
 Some of these cases are intentional but can be potentially surprising. Some
 could arguably be considered language warts. In general, what follows
 is a collection of potentially tricky behavior that might seem strange at first
-glance, but is generally sensible once you're aware of the underlying cause for
+glance, but are generally sensible, once you're aware of the underlying cause for
 the surprise.
 
 
 .. _default_args:
 
+
+*************************
 Mutable Default Arguments
--------------------------
+*************************
 
 Seemingly the *most* common surprise new Python programmers encounter is
 Python's treatment of mutable default arguments in function definitions.
@@ -48,8 +53,8 @@ isn't provided, so that the output is::
     [12]
     [42]
 
-What Does Happen
-~~~~~~~~~~~~~~~~
+What Actually Happens
+~~~~~~~~~~~~~~~~~~~~~
 
 .. testoutput::
 
@@ -88,11 +93,13 @@ to maintain state between calls of a function. This is often done when writing
 a caching function.
 
 
+****************************
 Late Binding Closures
----------------------
+****************************
 
 Another common source of confusion is the way Python binds its variables in
 closures (or in the surrounding global scope).
+
 
 What You Wrote
 ~~~~~~~~~~~~~~
@@ -119,8 +126,8 @@ variable that multiplies their argument, producing::
     6
     8
 
-What Does Happen
-~~~~~~~~~~~~~~~~
+What Actually Happens
+~~~~~~~~~~~~~~~~~~~~~
 
 .. testoutput::
 
@@ -189,9 +196,9 @@ lots of situations. Looping to create unique functions is unfortunately a case
 where they can cause hiccups.
 
 
-
+*********************************
 Bytecode (.pyc) Files Everywhere!
----------------------------------
+*********************************
 
 By default, when executing Python code from files, the Python interpreter
 will automatically write a bytecode version of that file to disk, e.g.
@@ -199,8 +206,8 @@ will automatically write a bytecode version of that file to disk, e.g.
 
 These ``.pyc`` files should not be checked into your source code repositories.
 
-Theoretically, this behavior is on by default, for performance reasons.
-Without these bytecode files present, Python would re-generate the bytecode
+Theoretically, this behavior is on by default for performance reasons.
+Without these bytecode files, Python would re-generate the bytecode
 every time the file is loaded.
 
 
